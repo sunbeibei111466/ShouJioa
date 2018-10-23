@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#fff"
+    >
+    <include
+        android:id="@+id/includeone"
+        layout="@layout/title_main"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:orientation="horizontal"
+            android:padding="0.2dp">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_bt_id"
+                android:paddingLeft="@dimen/dp_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0.2dp"
+                android:layout_weight="3"
+                android:background="#fff"
+                android:textColor="#000"
+                android:textSize="@dimen/sp_20"
+                android:text="2018年国庆值班安排"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/zgld"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0.1dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_weight="2"
+                android:gravity="right"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_30"
+                android:text="拟题人: "
+                android:background="#fff"
+                android:textSize="@dimen/sp_12"
+                android:textColor="#47837c"
+                />
+                <TextView
+                    android:gravity="center"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:textSize="@dimen/dp_12"
+                    android:id="@+id/editText"
+                    android:textColor="#47837c"
+                    />
+            <TextView
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1.5"
+                android:text="拟稿单位: "
+                android:background="#fff"
+                android:textSize="@dimen/sp_12"
+                android:textColor="#47837c"
+                />
+            <TextView
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:gravity="left|center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="@dimen/dp_12"
+                android:id="@+id/xzks_text"
+                android:textColor="#47837c"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0.1dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            >
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:id="@+id/edid_id"
+                    android:singleLine="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0.1dp"
+                    android:background="#fff"
+                    android:textColor="#000"
+                    android:textSize="@dimen/sp_17"
+                    />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0.1dp"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_5"
+            >
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="    附件:"
+                android:background="#fff"
+                android:textSize="@dimen/sp_15"
+                android:textColor="#000"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/RecyclerView_filename"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="0.2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:paddingLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                />
+        </LinearLayout>
+        <Button
+            android:layout_margin="@dimen/dp_10"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="返回"
+            android:onClick="onClick"
+            android:id="@+id/btn_login"
+            android:background="@drawable/border_line_while"
+            />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
+
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="@dimen/dp_30"-->
+<!--android:background="#06f7f7"-->
+<!--android:orientation="horizontal"-->
+<!--android:padding="0.2dp">-->
+<!--<TextView-->
+    <!--android:gravity="center"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="@dimen/dp_30"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="#fff"-->
+    <!--android:text="新闻类型"-->
+    <!--android:textColor="#000"-->
+    <!--android:textSize="@dimen/sp_10" />-->
+<!--<LinearLayout-->
+    <!--android:layout_marginLeft="0.1dp"-->
+    <!--android:padding="@dimen/dp_1"-->
+    <!--android:background="#fff"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="@dimen/dp_30"-->
+    <!--android:layout_weight="3"-->
+    <!--android:orientation="horizontal"-->
+    <!--&gt;-->
+    <!--<RadioButton-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/rbone"-->
+        <!--android:text="新闻期刊"-->
+        <!--android:textSize="@dimen/sp_10"-->
+        <!--android:checked="true"-->
+        <!--/>-->
+    <!--<RadioButton-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/rbtwo"-->
+        <!--android:text="卫生统计"-->
+        <!--android:textSize="@dimen/sp_10"-->
+        <!--/>-->
+
+<!--</LinearLayout>-->
+<!--</LinearLayout>-->
+
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="@dimen/dp_20"-->
+<!--android:background="#06f7f7"-->
+<!--android:orientation="horizontal"-->
+<!--android:padding="0.2dp">-->
+
+<!--<TextView-->
+    <!--android:gravity="center"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="#fff"-->
+    <!--android:text="标题"-->
+    <!--android:textColor="#000"-->
+    <!--android:textSize="@dimen/sp_10" />-->
+
+<!--<TextView-->
+    <!--android:gravity="center"-->
+    <!--android:id="@+id/tv_bt_id"-->
+    <!--android:paddingLeft="@dimen/dp_5"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="0.2dp"-->
+    <!--android:layout_weight="3"-->
+    <!--android:background="#fff"-->
+    <!--android:text="李白"-->
+    <!--android:textColor="#000"-->
+    <!--android:textSize="@dimen/sp_10" />-->
+<!--</LinearLayout>-->
+
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:background="#06f7f7"-->
+<!--android:orientation="vertical"-->
+<!--android:padding="0.2dp"-->
+<!--android:focusable="true"-->
+<!--android:focusableInTouchMode="true"-->
+    <!--&gt;-->
+<!--<TextView-->
+    <!--android:gravity="center"-->
+    <!--android:paddingTop="@dimen/dp_5"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:background="#fff"-->
+    <!--android:singleLine="false"-->
+    <!--android:text="公告内容"-->
+    <!--android:textColor="#000"-->
+    <!--android:textSize="@dimen/sp_10" />-->
+<!--<LinearLayout-->
+    <!--android:layout_marginTop="@dimen/dp_1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/linlay"-->
+    <!--android:padding="@dimen/dp_2"-->
+    <!--&gt;-->
+    <!--<TextView-->
+        <!--android:id="@+id/edid_id"-->
+        <!--android:padding="@dimen/dp_5"-->
+        <!--android:singleLine="false"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="0.2dp"-->
+        <!--android:background="#fff"-->
+        <!--android:textColor="#000"-->
+        <!--android:textSize="@dimen/sp_13"-->
+        <!--/>-->
+<!--</LinearLayout>-->
+
+<!--</LinearLayout>-->
+<!--<LinearLayout-->
+<!--android:id="@+id/zgld"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:background="#06f7f7"-->
+<!--android:padding="0.1dp"-->
+    <!--&gt;-->
+<!--<TextView-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="@dimen/dp_50"-->
+    <!--android:text="发布范围:"-->
+    <!--android:background="#fff"-->
+    <!--android:textSize="@dimen/sp_10"-->
+    <!--android:textColor="#000"-->
+    <!--/>-->
+<!--<LinearLayout-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="3"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:background="#fff"-->
+    <!--android:layout_marginLeft="0.2dp"-->
+    <!--&gt;-->
+    <!--<TextView-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:ellipsize="end"-->
+        <!--android:singleLine="true"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="3"-->
+        <!--android:textSize="@dimen/dp_10"-->
+        <!--android:id="@+id/editText"-->
+        <!--/>-->
+    <!--<Button-->
+        <!--android:enabled="false"-->
+        <!--android:onClick="onClick"-->
+        <!--android:id="@+id/xzld_btn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/bg_edittext"-->
+        <!--android:text="搜索"-->
+        <!--android:layout_marginLeft="@dimen/dp_5"-->
+        <!--android:textSize="@dimen/sp_10"-->
+        <!--/>-->
+<!--</LinearLayout>-->
+<!--</LinearLayout>-->
+
+<!--<LinearLayout-->
+<!--android:id="@+id/zgkz"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="@dimen/dp_50"-->
+<!--android:background="#06f7f7"-->
+<!--android:padding="0.1dp"-->
+    <!--&gt;-->
+<!--<TextView-->
+    <!--android:gravity="center"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="@dimen/dp_50"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="审批人:"-->
+    <!--android:background="#fff"-->
+    <!--android:textSize="@dimen/sp_10"-->
+    <!--android:textColor="#000"-->
+    <!--/>-->
+<!--<LinearLayout-->
+    <!--android:layout_weight="3"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:background="#fff"-->
+    <!--android:layout_marginLeft="0.2dp"-->
+    <!--&gt;-->
+    <!--<TextView-->
+        <!--android:ellipsize="end"-->
+        <!--android:singleLine="true"-->
+        <!--android:textStyle="bold"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="3"-->
+        <!--android:textSize="@dimen/dp_10"-->
+        <!--android:id="@+id/xzks_text"-->
+        <!--/>-->
+    <!--<Button-->
+        <!--android:enabled="false"-->
+        <!--android:onClick="onClick"-->
+        <!--android:id="@+id/xzks_btn"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/bg_edittext"-->
+        <!--android:hint="搜索"-->
+        <!--android:layout_marginLeft="@dimen/dp_5"-->
+        <!--android:textSize="@dimen/sp_10"-->
+        <!--/>-->
+<!--</LinearLayout>-->
+<!--</LinearLayout>-->
+
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="@dimen/dp_50"-->
+<!--android:background="#06f7f7"-->
+<!--android:orientation="horizontal"-->
+<!--android:padding="0.2dp"-->
+<!--android:focusable="true"-->
+<!--android:focusableInTouchMode="true"-->
+    <!--&gt;-->
+
+<!--<TextView-->
+    <!--android:gravity="center"-->
+    <!--android:paddingTop="@dimen/dp_5"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="#fff"-->
+    <!--android:singleLine="false"-->
+    <!--android:text="短信通知审批人:"-->
+    <!--android:textColor="#000"-->
+    <!--android:textSize="@dimen/sp_10" />-->
+
+<!--<TextView-->
+    <!--android:paddingTop="@dimen/dp_5"-->
+    <!--android:singleLine="false"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="3"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginLeft="0.2dp"-->
+    <!--android:background="#fff"-->
+    <!--android:textColor="#000"-->
+    <!--android:textSize="@dimen/sp_10"-->
+
+    <!--/>-->
+<!--</LinearLayout>-->
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="@dimen/dp_40"-->
+<!--android:background="#06f7f7"-->
+<!--android:padding="0.1dp"-->
+    <!--&gt;-->
+<!--<TextView-->
+    <!--android:gravity="center"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="@dimen/dp_40"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="附件:"-->
+    <!--android:background="#fff"-->
+    <!--android:textSize="@dimen/sp_10"-->
+    <!--android:textColor="#000"-->
+    <!--/>-->
+<!--<TextView-->
+    <!--android:ellipsize="end"-->
+    <!--android:singleLine="true"-->
+    <!--android:textStyle="bold"-->
+    <!--android:id="@+id/filename"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:layout_marginLeft="0.2dp"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="@dimen/dp_40"-->
+    <!--android:layout_weight="3"-->
+    <!--android:text="编码规范"-->
+    <!--android:background="#fff"-->
+    <!--android:textSize="@dimen/sp_10"-->
+    <!--android:paddingLeft="@dimen/dp_10"-->
+    <!--/>-->
+<!--</LinearLayout>-->

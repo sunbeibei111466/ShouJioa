@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_30"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="#fff"
+    >
+<!--<project01.shoujioa.XCRoundImageView-->
+    <!--android:layout_width="@dimen/dp_20"-->
+    <!--android:layout_height="@dimen/dp_20"-->
+    <!--android:src="@mipmap/gzq"-->
+    <!--android:layout_marginLeft="@dimen/dp_9"-->
+    <!--/>-->
+    <ImageView
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:src="@mipmap/gzq"
+        android:layout_marginLeft="@dimen/dp_9"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="工作区"
+        android:textSize="@dimen/sp_15"
+        android:layout_marginLeft="@dimen/dp_15"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_15"
+        android:gravity="right"
+        android:layout_marginRight="@dimen/dp_10"
+        />
+</LinearLayout>

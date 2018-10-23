@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/bg"
+    >
+    <ImageView
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:src="@mipmap/logos"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_10"
+        />
+    <ImageView
+        android:layout_marginTop="@dimen/dp_85"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_70"
+        android:layout_gravity="center"
+        android:src="@mipmap/text"
+        />
+    <EditText
+        android:layout_gravity="center"
+        android:drawableLeft="@mipmap/iconones"
+        android:id="@+id/edit_name"
+
+        android:layout_marginTop="@dimen/dp_140"
+        android:layout_width="@dimen/dp_290"
+        android:layout_height="@dimen/dp_39"
+        android:hint=" 请输入账号"
+        android:textSize="@dimen/sp_12"
+    />
+    <EditText
+        android:layout_gravity="center"
+        android:drawableLeft="@mipmap/icontwos"
+        android:id="@+id/edit_pass"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="@dimen/dp_290"
+        android:layout_height="@dimen/dp_39"
+        android:hint=" 请输入密码"
+        android:textSize="@dimen/sp_12"
+        android:password="true"
+        />
+    <Button
+        android:layout_margin="@dimen/dp_35"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="@dimen/dp_290"
+        android:layout_height="@dimen/dp_39"
+        android:button="@null"
+        android:text="登录"
+        android:textColor="#fff"
+        android:onClick="onClick"
+        android:id="@+id/btn_login"
+        android:textSize="@dimen/sp_14"
+        android:background="@drawable/button_shape"
+        />
+
+</LinearLayout>

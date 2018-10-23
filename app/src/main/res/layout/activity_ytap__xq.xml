@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+>
+    <include
+        android:id="@+id/includeone"
+        layout="@layout/title_main"/>
+    <!--议题名称-->
+    <LinearLayout
+        android:paddingTop="@dimen/dp_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:background="#f1270c"
+        android:paddingLeft="@dimen/dp_1"
+        android:paddingRight="@dimen/dp_1"
+        android:paddingBottom="@dimen/dp_1"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_weight="1.2"
+            android:background="#fff"
+            android:gravity="center"
+            android:text="议   题   名   称"
+            android:textColor="#000"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:textColor="#000"
+            android:id="@+id/laiwendanwei"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="0.1dp"
+            android:layout_weight="3"
+            android:background="#fff"
+            android:gravity="center"
+            android:text="北京市卫生和计划生育委员会"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+    <!--申报科室-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:paddingLeft="@dimen/dp_1"
+        android:paddingRight="@dimen/dp_1"
+        android:paddingBottom="@dimen/dp_1"
+        android:background="#f1270c">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="0.2dp"
+            android:layout_weight="1.2"
+            android:background="#fff"
+            android:gravity="center"
+            android:text="申   报   科   室"
+            android:textColor="#000"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:textColor="#000"
+            android:id="@+id/wenhao"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="0.1dp"
+            android:layout_weight="3"
+            android:background="#fff"
+            android:gravity="center"
+            android:text="1444"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+    <!--填写时间-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:background="#f1270c"
+        android:paddingLeft="@dimen/dp_1"
+        android:paddingRight="@dimen/dp_1"
+        android:paddingBottom="@dimen/dp_1"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="0.2dp"
+            android:layout_weight="1.2"
+            android:background="#fff"
+            android:gravity="center"
+            android:text="填   写   时   间"
+            android:textColor="#000"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/fenshu"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="0.2dp"
+            android:layout_weight="3"
+            android:background="#fff"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="#000"
+            android:textSize="@dimen/sp_15"
+
+            />
+    </LinearLayout>
+    <!--汇报人-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:background="#f1270c"
+        android:paddingLeft="@dimen/dp_1"
+        android:paddingRight="@dimen/dp_1"
+        android:paddingBottom="@dimen/dp_1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_weight="1.2"
+            android:background="#fff"
+            android:gravity="center"
+            android:text="汇      报       人"
+            android:textColor="#000"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginLeft="0.2dp"
+            android:layout_weight="3"
+            android:background="#fff"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:text="fffss"
+            android:textColor="#000"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+    <!--汇报时间-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_1"
+        android:paddingRight="@dimen/dp_1"
+        android:paddingBottom="@dimen/dp_1"
+        android:background="#f1270c"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:layout_weight="1.2"
+            android:text="汇   报   时   间"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="@dimen/sp_15"
+            />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:layout_marginLeft="0.1dp"
+            >
+            <TextView
+                android:textColor="#000"
+                android:gravity="center"
+                android:id="@+id/xbyj_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/sp_14" />
+        </FrameLayout>
+
+    </LinearLayout>
+    <!--附件-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_1"
+        android:paddingRight="@dimen/dp_1"
+        android:paddingBottom="@dimen/dp_1"
+        android:background="#f1270c"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:layout_weight="1.2"
+            android:background="#fff"
+            android:text="   附                 件"
+            android:textColor="#000"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/sp_15" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/filename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+          />
+    </LinearLayout>
+    <!--提交按钮-->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/border_line_while"
+        android:button="@null"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="返回" />
+</LinearLayout>

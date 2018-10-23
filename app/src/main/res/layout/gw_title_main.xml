@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:background="#a8a8f2"
+    android:orientation="horizontal"
+    >
+    <Button
+        android:background="@null"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="match_parent"
+        android:text="〈"
+        android:id="@+id/img_btn"
+        android:textSize="@dimen/sp_20"
+        android:onClick="onClick"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="公文审批"
+        android:gravity="center"
+        android:textSize="@dimen/sp_15"
+        android:id="@+id/title_text"
+        android:textColor="#fff"
+    />
+    <TextView
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>

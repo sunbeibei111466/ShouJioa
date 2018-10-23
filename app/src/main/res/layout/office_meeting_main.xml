@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/textView"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="代办事件,代办事件代办事件代办事件"
+                android:textSize="@dimen/sp_13"
+                android:ellipsize="end"
+                android:lines="1"
+                />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="14sp"
+            android:textColor="@color/green"
+            android:text="待开始"
+            android:textStyle="bold"
+            />
+
+                <TextView
+                    android:id="@+id/time"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_10"
+                    android:textColor="#bdc7c2"
+                    android:text="2018-6-23  9:00"
+                    android:layout_below="@id/textView"
+                    android:layout_marginTop="10dp"
+                    />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp_1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/bg_dotted_line"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layerType="software"
+        />
+</LinearLayout>
