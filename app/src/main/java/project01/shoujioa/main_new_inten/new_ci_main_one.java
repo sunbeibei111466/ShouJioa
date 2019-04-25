@@ -53,6 +53,7 @@ public class new_ci_main_one extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String s) {
+                        Log.e("想请你",s);
                         Gson gson=new Gson();
                         try {
                             JSONObject jsonObject1 = new JSONObject(s);
@@ -61,30 +62,29 @@ public class new_ci_main_one extends AppCompatActivity {
 
                             }else{
                                 new_ci_main_two_tool new_ci_main_two_tool = gson.fromJson(s, new_ci_main_two_tool.class);
-                                project01.shoujioa.gson_tool.new_ci_main_two_tool.MapBean.WsjGgglBean wsjGggl = new_ci_main_two_tool.getMap().getWsjGggl();
-                                Log.e("TAG",wsjGggl.getLx());
-                                if(wsjGggl.getLx().equals("新闻期刊")){
+                                String lx = new_ci_main_two_tool.getMap().getWsjXwzx().getLx();
+
+
+                                if(lx.equals("新闻期刊")){
                                     rbone.setChecked(true);
                                     rbtwo.setChecked(false);
-                                }else if(wsjGggl.getLx().equals("卫生统计")){
+                                }else if(lx.equals("卫生统计")){
                                     rbtwo.setChecked(true);
                                     rbone.setChecked(false);
-                                }else if(wsjGggl.getLx().equals("")){
+                                }else if(lx.equals("")){
                                     rbone.setChecked(false);
                                     rbtwo.setChecked(false);
                                 }
-                                tv_bt_id.setText(wsjGggl.getBt());
+                                tv_bt_id.setText(new_ci_main_two_tool.getMap().getWsjXwzx().getBt());
                                 edid_id.setMovementMethod(ScrollingMovementMethod.getInstance());// 设置可滚动
                                 edid_id.setMovementMethod(LinkMovementMethod.getInstance());//设置超链接可以打开网页
-                                edid_id.setText(Html.fromHtml(wsjGggl.getGgnr(), null, null));
-                                if(wsjGggl.getUser()==null){
-                                   editText.setText("");
-                                }else{
+                                edid_id.setText(Html.fromHtml(new_ci_main_two_tool.getMap().getWsjXwzx().getXwnr(), null, null));
+
                                     editText.setText(wsjGggl.getUser().getName());
-                                }
-                                ids=wsjGggl.getId();
-                                xzks_text.setText(wsjGggl.getFbr());
-                                filename.setText(wsjGggl.getScfile());
+
+                                ids=new_ci_main_two_tool.getMap().getWsjXwzx().getId();
+                                xzks_text.setText(new_ci_main_two_tool.getMap().getWsjXwzx().getFbr());
+                                filename.setText(new_ci_main_two_tool.getMap().getWsjXwzx().getScfile());
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
